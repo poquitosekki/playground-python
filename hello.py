@@ -39,7 +39,11 @@ print(str)
 greeting = "Hello"
 name = "Paul"
 
+# 3 Methods of Concatenation
 greet = greeting + ", " + name + ". Welcome!"
 greet = "{}, {}. Welcome!".format(greeting, name)
-greet = f'{greeting}, {name}. Welcome!'
+greet = f'{greeting.upper()}, {name}. Welcome!'
 print(greet)
+
+# This prints every method that's available for your String
+print(dir(name))
