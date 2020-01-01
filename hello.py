@@ -1,11 +1,5 @@
 # Printing a Welcome message
-print("hello world")
-print("again")
 
+message = "Hello World"
 
-class Animal:
-    pass
-
-
-def testing():
-    pass
+print(message)
