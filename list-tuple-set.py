@@ -1,6 +1,16 @@
 #########################
-# DEFINITIONS
+# LISTS : MUTABLE
 #########################
+
+# Create empty list, tuples, sets
+empty_list = []
+empty_list = list()
+
+empty_tuple = ()
+empty_tuple = tuple()
+
+empty_set = {}  # This is not an empty Set : it's a Dictionary
+empty_set = set()  # USE THIS TO CREATE EMPTY SET
 
 # Lists :
 courses = ['Python', 'Git', 'Github', 'Pandas']
@@ -98,4 +108,42 @@ print(prog_lang_str)
 
 # Spliting the String into a list
 new_list = prog_lang_str.split(' - ')
-print(new_list)
+print(new_list, type(new_list))
+
+#########################
+# Tuples : IMMUTABLE
+#########################
+
+# When you know you need a list but you don't wanna change values
+# and you just want to loop through and Access without modifying
+# USE TUPLES
+
+prog_lang_tuple = ("Python", "Java", "Coq", "Lean", "Rust")
+print(prog_lang_tuple, type(prog_lang_tuple))
+
+for t in prog_lang_tuple:
+    print(t)
+
+for i, t in enumerate(prog_lang_tuple):
+    print(i, t)
+
+#########################
+# SETS : VALUES THAT ARE UNORDERED AND HAVE """NO""" DUPLICATES
+#########################
+
+prog_lang_set = {"Python", "Java", "Coq", "Lean", "Rust", "Python"}
+# Everytime you print the value are in a COMPLETLY RANDOM ORDER
+# it's unpredictable
+print(prog_lang_set, type(prog_lang_set))
+
+# Sets are optimized for Search (Memberschip Test)
+# More efficient
+print("Coq" in prog_lang_set)
+
+# Shared or not Shared
+prog_lang_set = {"Python", "Java", "Coq", "Lean", "Rust", "Python"}
+prog_metamath_set = {"Coq", "Lean", "Isabell", "Metamath"}
+
+print(prog_lang_set.intersection(prog_metamath_set))
+print(prog_lang_set.difference(prog_metamath_set))
+print(prog_lang_set.union(prog_metamath_set))
