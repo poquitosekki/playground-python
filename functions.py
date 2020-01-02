@@ -50,13 +50,13 @@ month_days = [23, 29, 30, 21, 4, 0, 10, 26, 8]
 def is_leap(year):
     # This is doc String = used to help document a class or a Fucntion
     # to know what it's doing
-    """Return True for leap Years, and False for non-leap Years."""
+    '''Return True for leap Years, and False for non-leap Years.'''
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 
 def days_in_month(year, month):
     # a doc String
-    """Return number of days in that month in the year."""
+    '''Return number of days in that month in the year.'''
     if not 1 <= month <= 12:
         return "Invalid Month"
 
