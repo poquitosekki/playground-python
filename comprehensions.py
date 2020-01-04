@@ -44,3 +44,5 @@ my_list = []
 # print(my_list)
 
 # Filter and lambdas method
+# my_list = list(filter(lambda n: n % 2 == 0, nums))
+# print(my_list)
