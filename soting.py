@@ -1,5 +1,4 @@
 from operator import attrgetter
-import random as r
 
 print("Soring lesson")
 
