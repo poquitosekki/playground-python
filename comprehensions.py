@@ -46,3 +46,67 @@ my_list = []
 # Filter and lambdas method
 # my_list = list(filter(lambda n: n % 2 == 0, nums))
 # print(my_list)
+
+############################################
+
+# We want a number pair from 0123 for each letter in abcd
+
+# Traditional method
+# my_list = []
+# for letter in "abcd":
+#     for num in range(4):
+#         my_list.append((letter, num))
+# print(my_list)
+
+# list comprehension method
+# my_list = [(letter, num) for letter in "abcd" for num in range(4)]
+# print(my_list)
+
+
+############################################
+# Dictionary comprehensions
+
+names = ['Bruce', 'Clark', 'Peter', 'Logan', 'Wade']
+heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
+# the Zip funciton just assign every match in a tuple and return it as list
+# print(list(zip(names, heros)))
+
+# my_dict = {}
+# for name, hero in zip(names, heros):
+#     my_dict[name] = hero
+# print(my_dict)
+
+# my_dict = {name: hero for name, hero in zip(names, heros)}
+# print(my_dict)
+
+############################################
+# Sets comprehensions
+
+nums = [1, 1, 2, 1, 3, 4, 3, 4, 5, 5, 6, 7, 8, 7, 9, 9]
+# my_set = set()
+# for n in nums:
+#     my_set.add(n)
+# print(my_set)
+
+# my_set = {n for n in nums}
+# print(my_set)
+
+############################################
+# Generator Expressions:
+
+nums = list(range(1, 11))
+
+# Generator Object
+# def gen_func(nums):
+#     for n in nums:
+#         yield n*n
+#
+#
+# my_gen = gen_func(nums)
+# print(my_gen)
+
+# Geneartor expression
+my_gen = (n*n for n in nums)
+
+for i in my_gen:
+    print(i)
