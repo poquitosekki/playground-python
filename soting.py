@@ -1,5 +1,6 @@
 from operator import attrgetter
 import random as r
+
 print("Soring lesson")
 
 # li = [3, 6, 7, 7, 87, 2, 0]
@@ -69,3 +70,27 @@ employees = [e1, e2, e3]
 # sort_employees = sorted(employees, key=lambda e: e.age)
 sort_employees = sorted(employees, key=attrgetter("age"))
 print(sort_employees)
+
+
+class Animal():
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+
+    def __repr__(self):
+        return "(Name : {}, Weight : {}Kg)".format(self.name, self.weight)
+
+
+dog = Animal("Dog", 23)
+cat = Animal("Cat", 12)
+
+animals = [dog, cat]
+
+
+def sort_weight(animal):
+    return animal.weight
+
+
+animals_s = sorted(animals, key=sort_weight)
+print(animals)
+print(animals_s)
